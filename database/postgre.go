@@ -5,17 +5,15 @@ import (
 	"fmt"
 	_ "github.com/lib/pq"
 	"log"
+	"project/config"
 )
 
-const DbUser = "postgres"
-const DbPassword = "postgres"
-
-func PgConnect(dbName string) (*sql.DB, error) {
-	return sql.Open("postgres", fmt.Sprintf("user=%s password=%s dbname=%s sslmode=disable host=localhost", DbUser, DbPassword, dbName))
+func PgConnect() (*sql.DB, error) {
+	return sql.Open("postgres", fmt.Sprintf("user=%s password=%s dbname=%s sslmode=disable host=localhost", config.DbUser, config.DbPassword, config.DbName))
 }
 
-func DbOpen(dbName string) *sql.DB {
-	db, err := PgConnect(dbName)
+func DbOpen() *sql.DB {
+	db, err := PgConnect()
 	if err != nil {
 		log.Fatal(err)
 	}
