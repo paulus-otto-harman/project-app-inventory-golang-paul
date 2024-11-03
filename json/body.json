@@ -1,4 +1,13 @@
 {
-  "session_id": "bf387e45-3c0b-4be2-994b-bd14bc1dbedd",
-  "name": "tiga"
+  "id": 0,
+  "name": "",
+  "category": {
+    "id": 0,
+    "name": ""
+  },
+  "location": {
+    "id": 0,
+    "name": ""
+  },
+  "session_id": "9f547358-4d44-4c21-8937-7f3985c5d8bc"
 }

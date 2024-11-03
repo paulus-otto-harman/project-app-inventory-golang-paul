@@ -1,1 +1,1 @@
-{"status_code":200,"message":"Category Created","data":{"id":4,"name":"tiga"}}
+{"status_code":401,"message":"Authentication failed","data":"sql: no rows in result set"}

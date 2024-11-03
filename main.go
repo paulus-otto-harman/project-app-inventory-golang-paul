@@ -5,11 +5,11 @@ import (
 	"project/app"
 	"project/config"
 	"project/database"
-	"project/view/location"
+	"project/view/product"
 	"sync"
 )
 
-func main() {
+func xmain() {
 
 	wg := sync.WaitGroup{}
 
@@ -18,7 +18,7 @@ func main() {
 	wg.Wait()
 }
 
-func xmain() {
+func main() {
 	db := database.DbOpen()
-	(view.Location{}).Render(context.WithValue(context.Background(), "sessionId", "9f547358-4d44-4c21-8937-7f3985c5d8bc"), db)
+	(view.Product{}).Render(context.WithValue(context.Background(), "sessionId", "9f547358-4d44-4c21-8937-7f3985c5d8bc"), db)
 }
