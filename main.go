@@ -9,7 +9,7 @@ import (
 	"sync"
 )
 
-func xmain() {
+func main() {
 
 	wg := sync.WaitGroup{}
 
@@ -18,7 +18,7 @@ func xmain() {
 	wg.Wait()
 }
 
-func main() {
+func xmain() {
 	db := database.DbOpen()
 	(view.Product{}).Render(context.WithValue(context.Background(), "sessionId", "9f547358-4d44-4c21-8937-7f3985c5d8bc"), db)
 }
