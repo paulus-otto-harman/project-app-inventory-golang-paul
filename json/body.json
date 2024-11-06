@@ -1,13 +1,5 @@
 {
-  "id": 0,
-  "name": "",
-  "category": {
-    "id": 0,
-    "name": ""
-  },
-  "location": {
-    "id": 0,
-    "name": ""
-  },
-  "session_id": "9f547358-4d44-4c21-8937-7f3985c5d8bc"
+  "page": 1,
+  "limit": 5,
+  "session_id": "b6ba1226-fc90-4d65-944e-0ba538138e8f"
 }

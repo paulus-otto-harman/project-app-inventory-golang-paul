@@ -13,8 +13,8 @@ import (
 
 type Location struct {
 	Id        int    `json:"-"`
-	SessionId string `json:"session_id"`
 	Name      string `json:"name"`
+	SessionId string `json:"session_id"`
 }
 
 func (location Location) Render(ctx context.Context, db *sql.DB) int {

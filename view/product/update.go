@@ -11,28 +11,26 @@ import (
 	com "project/util"
 )
 
-type Product struct {
-	Id         int    `json:"-"`
-	Name       string `json:"name"`
-	CategoryId int    `json:"category_id"`
-	LocationId int    `json:"location_id"`
-	SessionId  string `json:"session_id"`
+type ProductUpdate struct {
+	Id        int    `json:"id"`
+	Balance   int    `json:"balance"`
+	SessionId string `json:"session_id"`
 }
 
-func (product Product) Render(ctx context.Context, db *sql.DB) int {
-	com.H1("Tambah Barang")
+func (product ProductUpdate) Render(ctx context.Context, db *sql.DB) int {
+	com.H1("Update Stok")
 
 	product.SessionId = ctx.Value("sessionId").(string)
 	util.PrintJson(product)
 
-	fmt.Printf("\nUpdate body.json to add product. Session ID is %v\n\n", ctx.Value("sessionId"))
+	fmt.Printf("\nUpdate body.json to update balance of a product. Session ID is %v\n\n", ctx.Value("sessionId"))
 
 	if answer := com.ContinueOrReturn(); answer == 0 {
 		return 0
 	}
 
-	util.PrintJson(util.ReadJson(&Product{}, "body").(*Product), "Request")
-	handle.ProductCreate(db)
+	util.PrintJson(util.ReadJson(&ProductUpdate{}, "body").(*ProductUpdate), "Request")
+	handle.ProductUpdate(db)
 	response := util.ReadJson(&model.Response{}, "response").(*model.Response)
 	util.PrintJson(response, "Response")
 

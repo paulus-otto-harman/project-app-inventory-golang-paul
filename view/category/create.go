@@ -13,8 +13,8 @@ import (
 
 type Category struct {
 	Id        int    `json:"-"`
-	SessionId string `json:"session_id"`
 	Name      string `json:"name"`
+	SessionId string `json:"session_id"`
 }
 
 func (category Category) Render(ctx context.Context, db *sql.DB) int {

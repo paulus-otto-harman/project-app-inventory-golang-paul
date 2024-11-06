@@ -2,3 +2,5 @@ github.com/lib/pq v1.10.9 h1:YXG7RB+JIjhP29X+OtkiDnYaXQwpS4JEWq7dtCCRUEw=
 github.com/lib/pq v1.10.9/go.mod h1:AlVN5x4E4T544tWzH6hKfbfQvm3HdbOxrmggDNAPY9o=
 github.com/paulus-otto-harman/golang-module v1.0.4 h1:MW8kAFNSPdeJt3lnRkkQmEaUFmXNiiLKQ/0GpShNbbo=
 github.com/paulus-otto-harman/golang-module v1.0.4/go.mod h1:w9ER9weyR0BUz/4RAhHyJNfoj2Uw1UdckIu2o/L3ccY=
+github.com/paulus-otto-harman/golang-module v1.0.5 h1:k7l8Xgl/vfz20t345IICCctL6wvUTS9dfwf1SEzlwE0=
+github.com/paulus-otto-harman/golang-module v1.0.5/go.mod h1:w9ER9weyR0BUz/4RAhHyJNfoj2Uw1UdckIu2o/L3ccY=

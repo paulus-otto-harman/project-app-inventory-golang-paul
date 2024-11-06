@@ -35,6 +35,7 @@ func (home *Home) Render(ctx context.Context, db *sql.DB) int {
 	case 2:
 		Render(&Category{}, ctx, db)
 	case 3:
+		Render(&Search{}, ctx, db)
 	case 9:
 		home.isLogout = true
 		return 0

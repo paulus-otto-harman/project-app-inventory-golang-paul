@@ -5,12 +5,11 @@ import (
 	"project/app"
 	"project/config"
 	"project/database"
-	"project/view/product"
+	view "project/view/transaction"
 	"sync"
 )
 
 func main() {
-
 	wg := sync.WaitGroup{}
 
 	wg.Add(1)
@@ -18,7 +17,9 @@ func main() {
 	wg.Wait()
 }
 
-func xmain() {
+func test() {
 	db := database.DbOpen()
-	(view.Product{}).Render(context.WithValue(context.Background(), "sessionId", "9f547358-4d44-4c21-8937-7f3985c5d8bc"), db)
+	defer db.Close()
+	const test = "491f841a-0e4b-40bb-b998-cae61f1568f6"
+	(view.TransactionIndex{}).Render(context.WithValue(context.Background(), "sessionId", test), db)
 }
